@@ -1,0 +1,317 @@
+public class Country {
+	private int mil, ind, pop, wea, sci, uni;
+	
+	public Country() {
+		mil = 1;
+		ind = 1;
+		pop = 1;
+		wea = 1;
+		sci = 1;
+		uni = 1;
+	}
+	
+	// getters
+	public int getMil() {
+		return mil;
+	}
+	
+	public int getInd() {
+		return ind;
+	}
+	
+	public int getPop() {
+		return pop;
+	}
+	
+	public int getWea() {
+		return wea;
+	}
+	
+	public int getSci() {
+		return sci;
+	}
+	
+	public int getUni() {
+		return uni;
+	}
+	
+	//setters
+	public void setMil(int m) {
+		mil += m;
+	}
+	
+	public void setInd(int i) {
+		ind += i;
+	}
+	
+	public void setPop(int p) {
+		pop += p;
+	}
+	
+	public void setWea(int w) {
+		wea += w;
+	}
+	
+	public void setSci(int s) {
+		sci += s;
+	}
+	
+	public void setUni(int u) {
+		uni += u;
+	}
+	
+	//governments
+	public void setRepublic() {
+		setMil(1);
+		setInd(1);
+		setPop(1);
+		setWea(1);
+		setSci(2);
+		setUni(3);
+	}
+	
+	public void setMonarchy() {
+		setMil(1);
+		setInd(1);
+		setPop(1);
+		setWea(2);
+		setSci(1);
+		setUni(3);
+	}
+	
+	public void setDictatorship() {
+		setMil(2);
+		setInd(1);
+		setPop(1);
+		setWea(1);
+		setSci(1);
+		setUni(3);
+	}
+	
+	//ideologies
+	public void setCapitalist() {
+		setPop(3);
+		setWea(3);
+		setUni(2);
+	}
+	
+	public void setCommunist() {
+		setInd(3);
+		setSci(3);
+		setUni(3);
+	}
+	
+	public void setFascist() {
+		setMil(3);
+		setSci(3);
+		setUni(1);
+	}
+	
+	//advantages
+		//capitalist
+	public void setArsenalOfFreedom() {
+		System.out.println("+ Arsenal of Freedom");
+		setMil(1);
+		setInd(2);
+	}
+	
+	public void setMarketDominance() {
+		System.out.println("+ Market Dominance");
+		setWea(2);
+		setSci(1);
+	}
+	
+	public void setLandOfOpportunity() {
+		System.out.println("+ Land of Opportunity");
+		setPop(2);
+		setWea(1);
+	}
+	
+		//communist
+	public void setFiveYearPlan() {
+		System.out.println("+ Five-Year Plan");
+		setInd(1);
+		setWea(1);
+		setSci(1);
+	}
+	
+	public void setPatrioticWar() {
+		System.out.println("+ Patriotic War");
+		//System.out.println("Troops fight until death instead of retreating.");
+	}
+	
+	public void setRevolutionarySpirit() {
+		System.out.println("+ Revolutionary Spirit");
+		setUni(3);
+	}
+	
+		//fascist
+	public void setSubversivePropaganda() {
+		System.out.println("+ Subversive Propaganda");
+		//System.out.println("Confer -3 Unity to enemy nations.");
+	}
+	
+	public void setMassMobilization() {
+		System.out.println("+ Mass Mobilization");
+		setInd(3);
+	}
+	
+	public void setMilitaryTradition() {
+		System.out.println("+ Military Tradition");
+		setMil(2);
+		setSci(1);
+	}
+	
+		//neutral
+	public void setIndustrialSabotage() {
+		System.out.println("+ Industrial Sabotage");
+		//System.out.println("Confer -2 Industry to invaders.");
+	}
+	
+	public void setForeignEthos() {
+		System.out.println("+ Foreign Ethos");
+		//System.out.println("Bonus relations with all nations.");
+	}
+	
+	public void setFriendlyGeography() {
+		System.out.println("+ Friendly Geography");
+		//System.out.println("Confer -2 Military to invaders.");
+	}
+	
+	public void setNationalism() {
+		System.out.println("+ Nationalism");
+		setMil(1);
+		setUni(1);
+	}
+	
+	public void setUnifiedAcademia() {
+		System.out.println("+ Unified Academia");
+		setSci(2);
+	}
+	
+	public void setUrbanization() {
+		System.out.println("+ Urbanization");
+		setPop(1);
+		setInd(1);
+	}
+	
+	//disadvantages
+		//capitalist
+	public void setLaxRegulations() {
+		System.out.println("- Lax Regulations");
+		setPop(-1);
+		setInd(-1);
+	}
+	
+	public void setMyopicForecasting() {
+		System.out.println("- Myopic Forecasting");
+		setMil(-1);
+		setSci(-1);
+	}
+	
+	public void setFourthEstate() {
+		System.out.println("- Fourth Estate");
+		setUni(-2);
+	}
+	
+		//communist
+	public void setCulturalReformation() {
+		System.out.println("- Cultural Reformation");
+		setPop(-1);
+		setUni(-1);
+	}
+	
+	public void setClosedBorders() {
+		System.out.println("- Closed Borders");
+		setWea(-2);
+	}
+	
+	public void setGreatPurge() {
+		System.out.println("- Great Purge");
+		setMil(-1);
+		setPop(-1);
+	}
+	
+		//fascist
+	public void setCorporatistPractice() {
+		System.out.println("- Corporatist Practice");
+		setInd(-1);
+		setWea(-1);
+	}
+	
+	public void setSecretPolice() {
+		System.out.println("- Secret Police");
+		setUni(-2);
+	}
+	
+	public void setStrategicRelocation() {
+		System.out.println("- Strategic Relocation");
+		setPop(-1);
+		setWea(-1);
+	}
+	
+	//technologies
+	public void setAutomaticWeapons() {
+		System.out.println("[Automatic Weapons]");
+	}
+	
+	public void setTrenchWarfare() {
+		System.out.println("[Trench Warfare]");
+	}
+	
+	public void setPoisonGas() {
+		System.out.println("[Poison Gas]");
+	}
+	
+	public void setWarplanes() {
+		System.out.println("[Warplanes]");
+	}
+	
+	public void setTanks() {
+		System.out.println("[Tanks]");
+	}
+	
+	public void setWarships() {
+		System.out.println("[Warships]");
+	}
+	
+	public void setAssemblyLineProduction() {
+		System.out.println("[Assembly Line Production]");
+		setInd(2);
+	}
+	
+	public void setAdvancedRailways() {
+		System.out.println("[Advanced Railways]");
+	}
+	
+	public void setPropaganda() {
+		System.out.println("[Propaganda]");
+		setUni(2);
+	}
+	
+	public void setGrandBattlePlan() {
+		System.out.println("[Grand Battle Plan]");
+		setMil(2);
+	}
+	
+	public void setRadio() {
+		System.out.println("[Radio]");
+	}
+	
+	public void setHospitalSystems() {
+		System.out.println("[Hospital Systems]");
+		setPop(2);
+	}
+	
+	//tostring
+	public String toString() {
+		String x = "";
+		x = "MIL: " + mil +
+			"\nIND: " + ind +
+			"\nPOP: " + pop + 
+			"\nWEA: " + wea + 
+			"\nSCI: " + sci +
+			"\nUNI: " + uni;
+		return x;
+	}
+}
