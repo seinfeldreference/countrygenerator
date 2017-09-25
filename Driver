@@ -1,10 +1,6 @@
 
 public class Driver {
 	public static void main(String[] args) {
-		//------------------------------------------------------
-		// Country Generator || by Justus Fee || 08-25-17
-		//------------------------------------------------------
-		
 		Country country = new Country();
 		int picked = 0;
 				
