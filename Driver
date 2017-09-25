@@ -1,20 +1,25 @@
+
 public class Driver {
 	public static void main(String[] args) {
+		//------------------------------------------------------
+		// Country Generator || by Justus Fee || 08-25-17
+		//------------------------------------------------------
+		
 		Country country = new Country();
 		int picked = 0;
 				
 		int result = (int)(Math.random() * 3 + 1);
 		String govt = "";
 		if(result == 1) {
-			country.setRepublic();
+			country.setNationStats(1, 1, 1, 1, 2, 3);
 			govt = "Republic";
 		}
 		else if(result == 2) {
-			country.setMonarchy();
+			country.setNationStats(1, 1, 1, 2, 1, 3);
 			govt = "Monarchy";
 		}
 		else {
-			country.setDictatorship();
+			country.setNationStats(2, 1, 1, 1, 1, 3);
 			govt = "Dictatorship";
 		}
 		
@@ -22,15 +27,15 @@ public class Driver {
 		int ideology = result;
 		String ideo = "";
 		if(result == 1) {
-			country.setCapitalist();
+			country.setNationStats(0, 0, 3, 3, 0, 2);
 			ideo = "Capitalist ";
 		}
 		else if(result == 2) {
-			country.setCommunist();
+			country.setNationStats(0, 3, 0, 0, 3, 3);
 			ideo = "Communist ";
 		}
 		else {
-			country.setFascist();
+			country.setNationStats(3, 0, 0, 0, 3, 1);
 			ideo = "Fascist ";
 		}
 		
@@ -44,69 +49,111 @@ public class Driver {
 			
 			if(result <= 3) {
 				if(ideology == 1) {
-					if(result == 1)
-						country.setArsenalOfFreedom();
-					else if(result == 2)
-						country.setMarketDominance();
-					else
-						country.setLandOfOpportunity();
+					if(result == 1) {
+						country.setNationStats(1, 2, 0, 0, 0, 0);
+						System.out.println("+ Arsenal of Freedom"); 
+					}
+					else if(result == 2) {
+						country.setNationStats(0, 0, 0, 2, 1, 0);
+						System.out.println("+ Market Dominance"); 
+						}
+					else {
+						country.setNationStats(0, 0, 2, 1, 0, 0);
+						System.out.println("+ Land of Opportunity");
+					}
 				}
 				else if(ideology == 2) {
-					if(result == 1)
-						country.setFiveYearPlan();
+					if(result == 1) {
+						country.setNationStats(0, 1, 0, 1, 1, 0); 
+						System.out.println("+ Five-Year Plan");
+					}
 					else if(result == 2)
-						country.setPatrioticWar();
-					else
-						country.setRevolutionarySpirit();
+						System.out.println("+ Patriotic War"); 
+					else {
+						country.setNationStats(0, 0, 0, 0, 0, 3);
+						System.out.println("+ Revolutionary Spirit");
+					}
 				}
 				else if(ideology == 3) {
-					if(result == 1)
-						country.setSubversivePropaganda();
-					else if(result == 2)
-						country.setMassMobilization();
-					else
-						country.setMilitaryTradition();
+					if(result == 1) {
+						System.out.println("+ Subversive Propaganda");
+					}
+					else if(result == 2) {
+						country.setNationStats(0, 3, 0, 0, 0, 0);
+						System.out.println("+ Mass Mobilization");
+					}
+					else {
+						country.setNationStats(2, 0, 0, 0, 1, 0);
+						System.out.println("+ Military Tradition");
+					}
 				}
 			}
 			else if(result > 3) {
 				if(result == 4)
-					country.setIndustrialSabotage();
+					System.out.println("+ Industrial Sabotage");
 				else if(result == 5)
-					country.setForeignEthos();
+					System.out.println("+ Foreign Ethos");
 				else if(result == 6)
-					country.setFriendlyGeography();
-				else if(result == 7)
-					country.setNationalism();
-				else if(result == 8)
-					country.setUnifiedAcademia();
-				else
-					country.setUrbanization();
+					System.out.println("+ Friendly Geography");
+				else if(result == 7) {
+					country.setNationStats(1, 0, 0, 0, 0, 1);
+					System.out.println("+ Nationalism"); 
+				}
+				else if(result == 8) {
+					country.setNationStats(0, 0, 0, 0, 2, 0);
+					System.out.println("+ Unified Academia"); 
+				}
+				else {
+					country.setNationStats(0, 1, 1, 0, 0, 0);
+					System.out.println("+ Urbanization");
+				}
 			}
 			picked = result;
 		}
 		
 		result = (int)(Math.random() * 3 + 1);
-		if(ideology == 1)
-			if(result == 1)
-				country.setLaxRegulations();
-			else if(result == 2)
-				country.setMyopicForecasting();
-			else
-				country.setFourthEstate();
-		else if(ideology == 2)
-			if(result == 1)
-				country.setCulturalReformation();
-			else if(result == 2)
-				country.setClosedBorders();
-			else
-				country.setGreatPurge();
-		else
-			if(result == 1)
-				country.setCorporatistPractice();
-			else if(result == 2)
-				country.setSecretPolice();
-			else
-				country.setStrategicRelocation();
+		if(ideology == 1) {
+			if(result == 1) {
+				country.setNationStats(0, -1, -1, 0, 0, 0);
+				System.out.println("- Lax Regulations");
+			}
+			else if(result == 2) {
+				country.setNationStats(-1, 0, 0, 0, -1, 0);
+				System.out.println("- Myopic Forecasting");
+			}
+			else {
+				country.setNationStats(0, 0, 0, 0, 0, -2);
+				System.out.println("- Fourth Estate");
+			}
+		}
+		else if(ideology == 2) {
+			if(result == 1) {
+				country.setNationStats(0, -1, 0, 0, 0, -1);
+				System.out.println("- Cultural Reformation");
+			}
+			else if(result == 2) {
+				country.setNationStats(0, 0, 0, -1, -1, 0);
+				System.out.println("- Closed Borders"); 
+				}
+			else {
+				country.setNationStats(-1, 0, 0, 0, 0, -1);
+				System.out.println("- Great Purge");
+			}
+		}
+		else {
+			if(result == 1) {
+				country.setNationStats(0, -1, 0, -1, 0, 0);
+				System.out.println("- Corpotatist Practice");
+			}
+			else if(result == 2) {
+				country.setNationStats(0, 0, 0, 0, 0, -2);
+				System.out.println("- Secret Police");
+			}
+			else {
+				country.setNationStats(0, 0, -1, -1, 0, 0);
+				System.out.println("- Strategic Relocation");
+			}
+		}
 		
 		System.out.println("");
 		
@@ -121,33 +168,43 @@ public class Driver {
 			}
 			
 			if(result == 1)
-				country.setAutomaticWeapons();
+				System.out.println("[Automatic Weapons]");
 			else if(result == 2)
-				country.setTrenchWarfare();
+				System.out.println("[Trench Warfare]");
 			else if(result == 3)
-				country.setPoisonGas();
+				System.out.println("[Poison Gas]");
 			else if(result == 4)
-				country.setWarplanes();
+				System.out.println("[Warplanes]");
 			else if(result == 5)
-				country.setTanks();
+				System.out.println("[Tanks]");
 			else if(result == 6)
-				country.setWarships();
-			else if(result == 7)
-				country.setAssemblyLineProduction();
+				System.out.println("[Warships]");
+			else if(result == 7) {
+				country.setNationStats(0, 2, 0, 0, 0, 0);
+				System.out.println("[Assembly Line Production]");
+			}
 			else if(result == 8)
-				country.setAdvancedRailways();
-			else if(result == 9)
-				country.setPropaganda();
-			else if(result == 10)
-				country.setGrandBattlePlan();
+				System.out.println("[Advanced Railways]");
+			else if(result == 9) {
+				country.setNationStats(0, 0, 0, 0, 0, 2);
+				System.out.println("[Propaganda]");
+			}
+			else if(result == 10) {
+				country.setNationStats(2, 0, 0, 0, 0, 0);
+				System.out.println("[Grand Battle Plan]");
+			}
 			else if(result == 11)
-				country.setRadio();
-			else
-				country.setHospitalSystems();
+				System.out.println("[Radio]");
+			else {
+				country.setNationStats(0, 0, 2, 0, 0, 0);
+				System.out.println("[Hospital Systems]");
+			}
 			
 			pickedNums[tech] = result;
 		}
 		
 		System.out.println("\n" + country.toString());
+		
+		System.out.println("\nPopulation: " + country.calcPop());
 	}
 }
